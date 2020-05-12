@@ -1,3 +1,3 @@
 <h3>{{ post.title }}</h3> <br/>
 <p>This is a toggle style icon.</p>
-<p>Click Me</p><favourite [isFavourite]="post.isFavourite"></favourite>
+<p>Click Me</p><favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChange($event)"></favourite>
