@@ -1,3 +1,9 @@
-<h3>{{ post.title }}</h3> <br/>
+<h3>{{ post.title }}</h3>
 <p>This is a toggle style icon.</p>
-<p>Click Me</p><favourite [isFavourite]="post.isFavourite" (state)="onFavouriteChange($event)"></favourite>
+<p>Click Me</p>
+<favourite [isFavourite]="post.isFavourite" (state)="onFavouriteChange($event)"></favourite>
+<br>
+<app-like-component [initialLikes]="tweet.count" [isToBeCounted]="tweet.isCounted" (counter)="onIncrementRequest($event)"></app-like-component> 
+<p>{{ LikeNumber }}</p>
+
+<input type="text" [appInputFormat]="'lowercase'">
